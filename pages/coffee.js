@@ -131,7 +131,7 @@ export default function Alcohol() {
             <span>in South Africa</span>
           </h1>
           <h2>
-            A list of South African coffee retailers (
+            A growing list of {data.length} South African coffee retailers (
             <a
               href="https://forms.gle/7hpj4wKfBEP4qnq89"
               target="_blank"

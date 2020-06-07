@@ -152,7 +152,8 @@ export default function Alcohol() {
             <span>in South Africa</span>
           </h1>
           <h2>
-            A list of South African alcohol retailers and wine farms (
+            A growing list of {data.length} South African alcohol retailers and
+            wine farms (
             <a
               href="https://forms.gle/TFAkWpnWCqMmkjVh9"
               target="_blank"
