@@ -27,8 +27,7 @@ const Header = styled.header`
   }
 
   a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 200, 200, 1);
   }
 `;
 
