@@ -34,9 +34,12 @@ const GlobalStyle = createGlobalStyle`
 
 export default function Home() {
   const router = useRouter();
-  ReactGA.initialize("UA-2422341-66");
-  ReactGA.set({ page: router.pathname });
-  ReactGA.pageview(router.pathname);
+
+  useEffect(() => {
+    ReactGA.initialize("UA-2422341-66");
+    ReactGA.set({ page: router.pathname });
+    ReactGA.pageview(router.pathname);
+  }, [router.pathname]);
 
   return (
     <div className="container">

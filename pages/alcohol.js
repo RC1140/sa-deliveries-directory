@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { GlobalStyle } from "../components/GlobalStyles";
@@ -126,9 +126,11 @@ export default function Alcohol() {
 
   const { status, data, error, isFetching } = useQuery("data", sheetData);
 
-  ReactGA.initialize("UA-2422341-66");
-  ReactGA.set({ page: router.pathname });
-  ReactGA.pageview(router.pathname);
+  useEffect(() => {
+    ReactGA.initialize("UA-2422341-66");
+    ReactGA.set({ page: router.pathname });
+    ReactGA.pageview(router.pathname);
+  }, [router.pathname]);
 
   return (
     <div className="container">
