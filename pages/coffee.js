@@ -105,11 +105,11 @@ export default function Alcohol() {
 
   const { status, data, error, isFetching } = useQuery("data", sheetData);
 
-  useEffect(() => {
-    ReactGA.initialize("UA-2422341-66");
-    ReactGA.set({ page: router.pathname });
-    ReactGA.pageview(router.pathname);
-  }, [router.pathname]);
+  // useEffect(() => {
+  ReactGA.initialize("UA-2422341-66");
+  ReactGA.set({ page: router.pathname });
+  ReactGA.pageview(router.pathname);
+  // }, [router.pathname]);
 
   return (
     <div className="container">

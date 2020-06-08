@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { GlobalStyle } from "../components/GlobalStyles";
 import { useRouter } from "next/router";
-import { createGlobalStyle } from "styled-components";
 import { useQuery } from "react-query";
 import ReactGA from "react-ga";
 

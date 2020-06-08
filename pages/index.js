@@ -1,36 +1,14 @@
-import { useMemo, useEffect } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styled, { createGlobalStyle } from "styled-components";
+import { GlobalStyle } from "../components/GlobalStyles";
 import ReactGA from "react-ga";
 
 import { Footer } from "../components/Footer";
 import { Main } from "../components/Main";
 import { Header } from "../components/Header";
 import { LaunchPad } from "../components/LaunchPad";
-
-// global styles
-const GlobalStyle = createGlobalStyle`
-  html {
-    font-size: 14px;
-
-    @media (min-width: 767px) {
-      font-size:16px;
-    }
-
-    @media (min-width: 1024px) {
-      font-size:18px;
-    }
-  }
-
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing:border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  }
-`;
 
 export default function Home() {
   const router = useRouter();
