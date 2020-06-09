@@ -25,9 +25,12 @@ const Footer = styled.footer`
 
   a {
     color: rgba(0, 0, 0, 0.5);
-    text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
+
+    &:last-of-type {
+      text-decoration: none;
+    }
   }
 `;
 
