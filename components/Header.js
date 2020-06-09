@@ -8,6 +8,10 @@ const Header = styled.header`
   padding-left: 3%;
   padding-right: 3%;
 
+  * {
+    outline: none;
+  }
+
   @media (min-width: 1024px) {
     font-size: 1.5rem;
   }
@@ -26,8 +30,13 @@ const Header = styled.header`
     margin: 20px 0 0;
   }
 
-  a {
+  a,
+  button {
     color: rgba(0, 200, 200, 1);
+    background: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
   }
 `;
 

@@ -115,7 +115,9 @@ export default function Alcohol() {
     <div className="container">
       <GlobalStyle></GlobalStyle>
       <Head>
-        <title>List of South African Booze Sellers</title>
+        <title>
+          List of South African Coffee Retailers that offer delivery
+        </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -135,13 +137,17 @@ export default function Alcohol() {
           <h2>
             A growing list of {data ? data.length : ""} South African coffee
             retailers (
-            <a
-              href="https://forms.gle/7hpj4wKfBEP4qnq89"
-              target="_blank"
-              rel="nofollow noreferrer"
+            <button
+              onClick={() => {
+                const confirming = confirm(
+                  "Have you used the search to confirm you're adding something new?\n\n(Search in the 'name' column)"
+                );
+                if (confirming)
+                  window.open("https://forms.gle/7hpj4wKfBEP4qnq89");
+              }}
             >
               Contribute to the list
-            </a>
+            </button>
             )
           </h2>
         </Header>

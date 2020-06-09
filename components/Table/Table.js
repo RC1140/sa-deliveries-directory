@@ -286,7 +286,8 @@ function DefaultColumnFilter({
   return (
     <input
       value={filterValue || ""}
-      placeholder="Filter"
+      style={{ padding: `5px` }}
+      placeholder="Search"
       onChange={(e) => {
         setFilter(e.target.value || undefined); // Set undefined to remove the filter entirely
       }}
