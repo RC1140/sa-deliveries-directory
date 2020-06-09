@@ -1,11 +1,12 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Head, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { Layout } from "../components/Layout";
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
-    const page = renderPage((Main) => (props) =>
-      sheet.collectStyles(<Main {...props} />)
+    const page = renderPage((Layout) => (props) =>
+      sheet.collectStyles(<Layout {...props} />)
     );
     const styleTags = sheet.getStyleElement();
     return { ...page, styleTags };
@@ -15,8 +16,9 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>{this.props.styleTags}</Head>
+
         <body>
-          <Main />
+          <Layout />
           <NextScript />
         </body>
       </html>

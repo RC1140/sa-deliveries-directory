@@ -6,7 +6,6 @@ import { GlobalStyle } from "../components/GlobalStyles";
 import { useQuery } from "react-query";
 import ReactGA from "react-ga";
 
-import { Footer } from "../components/Footer";
 import { Status } from "../components/Status";
 import { Main } from "../components/Main";
 import { Header } from "../components/Header";

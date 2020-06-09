@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { GlobalStyle } from "../components/GlobalStyles";
 import ReactGA from "react-ga";
 
-import { Footer } from "../components/Footer";
 import { Main } from "../components/Main";
 import { Header } from "../components/Header";
 import { LaunchPad } from "../components/LaunchPad";
