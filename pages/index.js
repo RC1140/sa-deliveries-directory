@@ -65,23 +65,6 @@ export default function Home() {
           </a>
         </LaunchPad>
       </Main>
-
-      <Footer>
-        <p>
-          Made by some oke in Cape Town who enjoy's a drink, almost as much as
-          he enjoys a good special and home delivery
-        </p>
-
-        <p>
-          <a
-            href="https://sacoronavirus.co.za/"
-            target="_blank"
-            rel="nofollow noreferrer"
-          >
-            STAY SAFE
-          </a>
-        </p>
-      </Footer>
     </div>
   );
 }
