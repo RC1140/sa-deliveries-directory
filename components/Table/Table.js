@@ -17,7 +17,7 @@ import ReactGA from "react-ga";
 import { Pagination } from "../Pagination";
 import { StyledTable } from "./StyledTable";
 
-function Table({ columns, data, updateMyData, skipReset }) {
+function Table({ columns, data, updateMyData, skipReset, tableFor }) {
   const filterTypes = React.useMemo(
     () => ({
       // Add a new fuzzyTextFilterFn filter type.
@@ -183,14 +183,20 @@ function Table({ columns, data, updateMyData, skipReset }) {
                             </svg>
                           </span>
                         ) : cell.column.isLink && cell.value ? (
-                          <ReactGA.OutboundLink
-                            eventLabel={cleanURL(cell.value)}
-                            to={cell.value}
+                          <a
+                            href={cell.value}
                             target="_blank"
                             rel="nofollow noreferrer"
+                            onClick={() => {
+                              ReactGA.event({
+                                category: tableFor,
+                                action: cleanURL(cell.value),
+                                label: "Outbound Link",
+                              });
+                            }}
                           >
                             {cleanURL(cell.value)}
-                          </ReactGA.OutboundLink>
+                          </a>
                         ) : (
                           cell.render("Cell")
                         )}
