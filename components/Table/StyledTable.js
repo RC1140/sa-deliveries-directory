@@ -22,6 +22,7 @@ const StyledTable = styled.div`
         text-decoration: none;
         font-weight: 600;
         text-transform: uppercase;
+        padding: 0 5px;
       }
 
       tr:last-of-type th {
