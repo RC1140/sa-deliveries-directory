@@ -188,7 +188,7 @@ export default function Alcohol() {
           <Status state="error">Borked :( {error.message}</Status>
         ) : (
           <>
-            <Table columns={columns} data={data}></Table>
+            <Table columns={columns} data={data} tableFor="alcohol"></Table>
           </>
         )}
       </Main>
