@@ -12,6 +12,7 @@ import {
   useRowSelect,
 } from "react-table";
 import matchSorter from "match-sorter";
+import ReactGA from "react-ga";
 
 import { Pagination } from "../Pagination";
 import { StyledTable } from "./StyledTable";
@@ -182,13 +183,14 @@ function Table({ columns, data, updateMyData, skipReset }) {
                             </svg>
                           </span>
                         ) : cell.column.isLink && cell.value ? (
-                          <a
-                            href={cell.value}
+                          <ReactGA.OutboundLink
+                            eventLabel={cleanURL(cell.value)}
+                            to={cell.value}
                             target="_blank"
                             rel="nofollow noreferrer"
                           >
                             {cleanURL(cell.value)}
-                          </a>
+                          </ReactGA.OutboundLink>
                         ) : (
                           cell.render("Cell")
                         )}
