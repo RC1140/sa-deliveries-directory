@@ -161,8 +161,14 @@ export default function Alcohol() {
                 const confirming = confirm(
                   "Have you used the search to confirm you're adding something new?\n\n(Search in the 'name' column)"
                 );
-                if (confirming)
-                  window.open("https://forms.gle/TFAkWpnWCqMmkjVh9");
+                if (confirming) {
+                  const id = new Date().getTime();
+                  const newWindow = window.open(
+                    "https://forms.gle/TFAkWpnWCqMmkjVh9",
+                    id
+                  );
+                  newWindow.focus();
+                }
               }}
             >
               Contribute to the list
