@@ -26,7 +26,7 @@ const Layout = () => {
             textAlign: "right",
             fontSize: "0.7rem",
             color: "rgba(0, 0, 0, 0.5)",
-            "&:first-of-type": { marginBottom: "5px" },
+            "&:firstOfType": { marginBottom: "5px" },
           }}
         >
           Made by{" "}
