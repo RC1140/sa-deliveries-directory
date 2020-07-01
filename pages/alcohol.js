@@ -55,6 +55,7 @@ export default function Alcohol() {
         filter: "fuzzyText",
         className: "title",
         width: "250px",
+        sortable: true,
       },
       {
         Header: "Stockists of",
@@ -68,6 +69,7 @@ export default function Alcohol() {
             Filter: CheckboxFilter,
             filter: "includes",
             width: "50px",
+            sortable: true,
           },
           {
             Header: "🍷",
@@ -77,6 +79,7 @@ export default function Alcohol() {
             Filter: CheckboxFilter,
             filter: "includes",
             width: "50px",
+            sortable: true,
           },
           {
             Header: "🍺",
@@ -86,6 +89,7 @@ export default function Alcohol() {
             Filter: CheckboxFilter,
             filter: "includes",
             width: "50px",
+            sortable: true,
           },
         ],
       },
@@ -99,6 +103,7 @@ export default function Alcohol() {
             align: "center",
             Filter: SelectColumnFilter,
             filter: "includes",
+            sortable: true,
           },
           {
             Header: "Province",
@@ -106,6 +111,7 @@ export default function Alcohol() {
             align: "center",
             Filter: SelectColumnFilter,
             filter: "includes",
+            sortable: true,
           },
         ],
       },
@@ -113,9 +119,15 @@ export default function Alcohol() {
         Header: "Contact",
         align: "center",
         columns: [
-          { Header: "✉️", accessor: "email", align: "center" },
-          { Header: "☎️", accessor: "phone", align: "center" },
-          { Header: "🔗", accessor: "url", align: "center", isLink: true },
+          { Header: "✉️", accessor: "email", align: "center", sortable: true },
+          { Header: "☎️", accessor: "phone", align: "center", sortable: true },
+          {
+            Header: "🔗",
+            accessor: "url",
+            align: "center",
+            isLink: true,
+            sortable: true,
+          },
         ],
       },
     ],

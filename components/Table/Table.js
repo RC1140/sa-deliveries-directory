@@ -17,6 +17,9 @@ import ReactGA from "react-ga";
 import { Pagination } from "../Pagination";
 import { StyledTable } from "./StyledTable";
 
+import Arrow from "../../public/icons/arrow.svg";
+import Filter from "../../public/icons/filter.svg";
+
 function Table({ columns, data, updateMyData, skipReset, tableFor }) {
   const filterTypes = React.useMemo(
     () => ({
@@ -129,11 +132,47 @@ function Table({ columns, data, updateMyData, skipReset, tableFor }) {
                         )}
 
                         {/* Add a sort direction indicator */}
-                        {column.isSorted
-                          ? column.isSortedDesc
-                            ? "  🔽"
-                            : "  🔼"
-                          : ""}
+                        {column.sortable && !column.isSorted && (
+                          <Filter
+                            width="10"
+                            height="10"
+                            style={{
+                              marginLeft: `5px`,
+                              position: `relative`,
+                              top: `1px`,
+                              fill: "rgba(0,0,0,.5)",
+                            }}
+                          />
+                        )}
+
+                        {column.isSorted ? (
+                          column.isSortedDesc ? (
+                            <Arrow
+                              width="10"
+                              height="10"
+                              style={{
+                                marginLeft: `5px`,
+                                position: `relative`,
+                                top: `1px`,
+                                opacity: `.6`,
+                              }}
+                            />
+                          ) : (
+                            <Arrow
+                              width="10"
+                              height="10"
+                              style={{
+                                marginLeft: `5px`,
+                                position: `relative`,
+                                top: `1px`,
+                                opacity: `.6`,
+                                transform: `scaleY(-1)`,
+                              }}
+                            />
+                          )
+                        ) : (
+                          ""
+                        )}
                       </span>
                     </div>
                     {/* Render the columns filter UI */}
