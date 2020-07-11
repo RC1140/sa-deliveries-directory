@@ -53,15 +53,12 @@ export default function Home() {
             </a>
           </Link>
 
-          <a
-            onClick={() => {
-              alert("Coming soon!");
-            }}
-            id="link-grocery"
-          >
-            <i>🍞</i>
-            <span>Directory for</span> <strong>Grocery Delivery</strong>
-          </a>
+          <Link href="/groceries">
+            <a id="link-groceries">
+              <i>🍞</i>
+              <span>Directory for</span> <strong>Grocery Delivery</strong>
+            </a>
+          </Link>
         </LaunchPad>
       </Main>
     </div>

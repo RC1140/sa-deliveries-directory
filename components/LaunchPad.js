@@ -67,11 +67,11 @@ const LaunchPad = styled.div`
       }
     }
 
-    &#link-grocery {
-      background: rgba(38, 84, 124, 0.4);
-      color: rgba(0, 0, 0, 0.4);
+    &#link-groceries {
+      background: rgba(0, 0, 100, 0.3);
+      color: rgba(0, 0, 0, 0.7);
       &:hover {
-        background: rgba(38, 84, 124, 0.7);
+        background: rgba(0, 0, 100, 0.4);
         transition: all 0.2s ease-in-out;
       }
     }
