@@ -14,11 +14,10 @@ import {
   CheckboxFilter,
   SelectColumnFilter,
 } from "../components/Table/filters";
-//docs.google.com/spreadsheets/d/1kDcLSk7Kh-1plq0QTw7C_QceiD-P6MRof9UJ9liVACI/edit?usp=sharing
 
 const sheetData = async () => {
   const data = await fetch(
-    "https://spreadsheets.google.com/feeds/list/1kDcLSk7Kh-1plq0QTw7C_QceiD-P6MRof9UJ9liVACI/2/public/values?alt=json"
+    "https://spreadsheets.google.com/feeds/list/1NTF3jHCbzN7I-klG84UnQquiZV8dVbNwf7dXV-Yhofs/1/public/values?alt=json"
   )
     .then((data) => data.json())
     .then((json) => {
