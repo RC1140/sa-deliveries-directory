@@ -23,7 +23,7 @@ export default function Home() {
       <GlobalStyle></GlobalStyle>
 
       <Head>
-        <title>List of South African Booze Sellers</title>
+        <title>A Directory of South African Retailers That Do Home Delivery</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -33,7 +33,7 @@ export default function Home() {
             <span>🇿🇦</span> ZA Delivery Directory
           </h1>
           <h2>
-            A list of services in South Africa, for alcohol delivery, coffee
+            A list of retailers in South Africa, for alcohol delivery, coffee
             delivery, and food delivery
           </h2>
         </Header>
